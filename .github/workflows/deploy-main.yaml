@@ -19,9 +19,9 @@ jobs:
           HOST: ${{ secrets.EC2_HOST }}
           USER: ${{ secrets.EC2_USER }}
         run: |
-          echo "$PRIVATE_KEY_BASE64" | base64 -d > private_key.pem
-          chmod 600 private_key.pem
-          ssh -o StrictHostKeyChecking=no -i private_key.pem $USER@$HOST << EOF
+          echo "$PRIVATE_KEY_BASE64" | base64 -d > mykeywebserver.pem
+          chmod 600 mykeywebserver.pem
+          ssh -o StrictHostKeyChecking=no -i mykeywebserver.pem $USER@$HOST << EOF
             cd windpro
             git pull origin main 
             docker-compose down
@@ -30,4 +30,4 @@ jobs:
             docker-compose build
             docker-compose up -d
           EOF
-          rm -f private_key.pem
+          rm -f mykeywebserver.pem
