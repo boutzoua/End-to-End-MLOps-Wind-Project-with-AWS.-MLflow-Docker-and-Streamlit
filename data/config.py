@@ -17,4 +17,5 @@ def get_config():
 
     # Create the MySQL database connection string
     db_url = f'postgresql+psycopg2://{PG_USER}:{PG_PASSWORD}@{PG_HOST}:{PG_PORT}/{PG_DATABASE}'
+
     return db_url

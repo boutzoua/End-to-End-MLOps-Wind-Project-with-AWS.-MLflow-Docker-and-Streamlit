@@ -53,7 +53,7 @@ def get_forecast(past_days = 0, forecast_days = 3):
         print(f"Failed to retrieve data. Status code: {response.status_code}")
     if past_days==7:
         df = df[df['Time'].dt.date < today]
-    # print(df)
+    print(df)
     return df
 
 if __name__ == "__main__":

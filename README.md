@@ -6,7 +6,9 @@ Welcome to the WindSurfPro repository! WindSurfPro is an exciting project aimed 
 <img width="1198" alt="Screenshot 2023-10-19 at 13 01 54" src="https://github.com/KrystianPi/WindPRO/assets/38494173/636cab80-f24a-4424-bb7c-736369d97688">
 
 
+
 ## Features
+
 
 - **Machine Learning-Enhanced Wind Forecasts**: WindSurfPro uses historical measured wind data to train machine learning models that provide more accurate and reliable wind forecasts for local windsurfing spots. By analyzing patterns and trends, the app can predict wind conditions with improved precision.
 

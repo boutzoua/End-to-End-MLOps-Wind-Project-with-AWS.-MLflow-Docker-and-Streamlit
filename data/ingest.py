@@ -25,6 +25,7 @@ def ingest_measurments(station, past_days):
     #query = f'SELECT MAX(Time) FROM {table_name}'
     query = f'SELECT MAX("Time") as last_time FROM {table_name}'
     df_last = pd.read_sql(query, engine)
+    print(f'df_last {df_last}')
 
     # The result will be in the first row, first column of the DataFrame
     last_date_in_db = pd.to_datetime(df_last['last_time'].iloc[0])
@@ -128,5 +129,5 @@ def record_training(station, model_name):
     df.to_sql(table_name, engine, if_exists='append', index=False)
     
 if __name__ == '__main__': 
-    ingest_measurments('kuznica',3)
-    # ingest_hist_forecast(1,3)
+    # ingest_measurments('rewa',3)
+    ingest_hist_forecast(1,3)

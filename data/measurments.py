@@ -89,7 +89,8 @@ def get_measurments(station, past_days):
 
     df['Update'] = date.today()
 
+    # print(df)
     return df
 
 if __name__ == '__main__': 
-    get_measurments(station='rewa', past_days=31)
+    get_measurments(station='rewa', past_days=3)
