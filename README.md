@@ -22,11 +22,6 @@ Welcome to the WindSurfPro repository! WindSurfPro is an exciting project aimed 
 
 - **Natural Language Descriptions**: Leveraging a Language Model, WindSurfPro generates natural language descriptions for the wind forecast. This adds a human touch to the forecasts, making them more accessible and engaging.
 
-## Contributing
 
-Contributions to WindSurfPro are welcome! Whether you want to add new features, improve existing functionality, or fix bugs, your contributions will help enhance this learning project. Please refer to our [Contribution Guidelines](CONTRIBUTING.md) for details on how to contribute.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
