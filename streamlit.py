@@ -6,11 +6,11 @@ import base64
 
 ######################################################## HELPER FUNCTIONS ########################################################
 def get_config():
-    PG_HOST=st.secrets.db_credentials.pg_host 
-    PG_PORT=st.secrets.db_credentials.pg_port
-    PG_DATABASE=st.secrets.db_credentials.pg_database
-    PG_USER=st.secrets.db_credentials.pg_user
-    PG_PASSWORD=st.secrets.db_credentials.pg_password
+    PG_HOST=st.secrets.pg_host 
+    PG_PORT=st.secrets.pg_port
+    PG_DATABASE=st.secrets.pg_database
+    PG_USER=st.secrets.pg_user
+    PG_PASSWORD=st.secrets.pg_password
 
     # Create the MySQL database connection string
     db_url = f'postgresql+psycopg2://{PG_USER}:{PG_PASSWORD}@{PG_HOST}:{PG_PORT}/{PG_DATABASE}'
