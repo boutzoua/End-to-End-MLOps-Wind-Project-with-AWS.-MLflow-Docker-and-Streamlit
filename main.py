@@ -64,7 +64,7 @@ if __name__ == '__main__':
     mlflow.set_tracking_uri(f"http://{TRACKING_SERVER_HOST}:5000") 
     experiment_name = 'xgb_8features_local_testing'
     model_name = 'xgboost-8features-hpt'
-    version = 5
+    version = 1
     try:
         id = mlflow.create_experiment(experiment_name, artifact_location="s3://windproboutzouabucket")
     except:
@@ -85,3 +85,5 @@ if __name__ == '__main__':
             monitor(station='rewa', model_name=model_name, version=version, RUN_ID=run.info.run_id)
         elif sys.argv[1] == 'ret':
             retrain(station='rewa', model_name=model_name, version=version, RUN_ID=run.info.run_id)
+        
+        experiment_data = mlflow.search_runs(experiment_ids=mlflow.get_experiment_by_name(experiment_name).experiment_id)

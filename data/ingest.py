@@ -1,9 +1,10 @@
 from sqlalchemy import create_engine
-from .measurments import get_measurments
-from .forecast import get_forecast
-from .config import get_config
+from measurments import get_measurments
+from forecast import get_forecast
+from config import get_config
 from pathlib import Path
 import datetime
+import mlflow
 import pandas as pd
 
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
@@ -127,8 +128,18 @@ def record_training(station, model_name):
 
     # Append the data to the SQL table
     df.to_sql(table_name, engine, if_exists='append', index=False)
-    
+
+def ingest_mlflow(experiment_id):
+    db_url = get_config()
+    print(db_url)
+    # Create an SQLAlchemy engine
+    engine = create_engine(db_url)
+    experiment_data = mlflow.search_runs(experiment_ids=experiment_id)
+    print(experiment_data)
+    # experiment_data.to_sql("runs", engine, if_exists='replace', index=False)
+
 if __name__ == '__main__': 
     # ingest_measurments('rewa',3)
-    ingest_hist_forecast(1,4)
+    # ingest_hist_forecast(1,4)
     # ingest_forecast()
+    ingest_mlflow(experiment_id ="123121000883176933")

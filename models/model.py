@@ -42,14 +42,14 @@ class Model():
     def transform(self, df_measurments, df_forecast, mode='base'):
         # Set the 'Time' column as the index
         df_measurments.set_index('Time', inplace=True)
-
-        # Resample the data with a two-hour interval and apply mean aggregation
+        df_measurments.drop('Update', inplace=True,axis=1)
+        print(f"==============================\n {df_measurments}")
+ 
+       # Resample the data with a two-hour interval and apply mean aggregation
         df_measurments = df_measurments.resample('2H').mean()
 
         df_measurments.reset_index(inplace=True)
-
         df = pd.merge(left=df_forecast, right=df_measurments, on='Time', how='inner')
-
         df.dropna(inplace=True)
 
         # Close the database connections
@@ -150,4 +150,5 @@ class Model():
         self.model = mlflow.pyfunc.load_model(model_uri=f"models:/{self.model_name}/{self.version}")
 
 if __name__ == '__main__': 
-    pass
+    pass    
+    
