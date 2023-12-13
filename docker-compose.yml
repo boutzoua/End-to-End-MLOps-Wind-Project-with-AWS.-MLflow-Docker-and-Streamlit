@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "8000:8000"
+      - "5000:5000"
     environment:
       # DATABASE_URL: "mysql+pymysql://root:password@mysql-db:3306/windpro"
       EC2_TRACKING_SERVER_HOST: "${EC2_TRACKING_SERVER_HOST}"

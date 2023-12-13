@@ -1,7 +1,7 @@
 from sqlalchemy import create_engine
-from measurments import get_measurments
-from forecast import get_forecast
-from config import get_config
+from .measurments import get_measurments
+from .forecast import get_forecast
+from .config import get_config
 from pathlib import Path
 import datetime
 import pandas as pd
@@ -130,4 +130,5 @@ def record_training(station, model_name):
     
 if __name__ == '__main__': 
     # ingest_measurments('rewa',3)
-    ingest_hist_forecast(1,3)
+    ingest_hist_forecast(1,4)
+    # ingest_forecast()
