@@ -10,7 +10,7 @@ Welcome to the WindSurfPro repository! WindSurfPro is an exciting project aimed 
 ##Interface
 <img width="1198" alt="Screenshot 2023-10-19 at 13 01 54" src="https://github.com/boutzoua/End-to-End-MLOps-Wind-Project-with-AWS.-MLflow-Docker-and-Streamlit/blob/main/assets/stremlit-windproject.jpg">
 
-## Features
+##Features
 
 
 - **Machine Learning-Enhanced Wind Forecasts**: WindSurfPro uses historical measured wind data to train machine learning models that provide more accurate and reliable wind forecasts for local windsurfing spots. By analyzing patterns and trends, the app can predict wind conditions with improved precision.
