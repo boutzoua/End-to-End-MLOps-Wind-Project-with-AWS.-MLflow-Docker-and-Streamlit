@@ -3,9 +3,12 @@
 Welcome to the WindSurfPro repository! WindSurfPro is an exciting project aimed at enhancing wind forecasts for local windsurfing spots using machine learning. This application runs on an AWS server and serves as an excellent learning opportunity for those interested in SQL, cloud services, machine learning, MLOps (Machine Learning Operations), CI/CD (Continuous Integration and Continuous Deployment), and more.
 
 ## Architecture
-<img width="1198" alt="Screenshot 2023-10-19 at 13 01 54" src="https://github.com/KrystianPi/WindPRO/assets/38494173/636cab80-f24a-4424-bb7c-736369d97688">
+<img width="1198" alt="Screenshot 2023-10-19 at 13 01 54" src="https://github.com/boutzoua/End-to-End-MLOps-Wind-Project-with-AWS.-MLflow-Docker-and-Streamlit/blob/main/assets/windproflow.jpg">
+<br>
+<img width="1198" alt="Screenshot 2023-10-19 at 13 01 54" src="https://github.com/boutzoua/End-to-End-MLOps-Wind-Project-with-AWS.-MLflow-Docker-and-Streamlit/blob/main/assets/windproarticherture.png">
 
-
+##Interface
+<img width="1198" alt="Screenshot 2023-10-19 at 13 01 54" src="https://github.com/boutzoua/End-to-End-MLOps-Wind-Project-with-AWS.-MLflow-Docker-and-Streamlit/blob/main/assets/stremlit-windproject.jpg">
 
 ## Features
 

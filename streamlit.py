@@ -123,7 +123,7 @@ def get_test_metrics():
 #############################################################################################################################################
 
 if __name__ == '__main__': 
-    set_background_image_with_base64('kuznica.jpeg')
+    set_background_image_with_base64('assets/kuznica.jpeg')
     df_metrics = get_test_metrics()
 
     # Dropdown to select the table
@@ -164,7 +164,7 @@ if __name__ == '__main__':
 
 
     if option == 'rewa':
-        set_background_image_with_base64('rewa.jpeg')
+        set_background_image_with_base64('assets/rewa.jpeg')
         # Title for the table
         st.markdown("### Forecast for Rewa, Poland enhanced with Machine Learning")
 
@@ -172,7 +172,7 @@ if __name__ == '__main__':
         st.dataframe(transformed_df_rewa, width = 500, height = 800)
         st.dataframe(df_metrics)
     elif option == 'kuznica':
-        set_background_image_with_base64('kuznica.jpeg')
+        set_background_image_with_base64('assets/kuznica.jpeg')
         st.markdown("### Forecast for Kuznica, Poland enhanced with Machine Learning")
 
         # Display the transformed DataFrame
